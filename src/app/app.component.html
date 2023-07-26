@@ -1,13 +1,4 @@
-<h2>Hello World: ngIf!</h2>
-
-<button type="button" (click)="onEditClick()">Make text editable!</button>
-
-<div *ngIf="canEdit; else res">
-  <p>You can edit the following paragraph.</p>
+<app-top-bar></app-top-bar>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
-
-<ng-template #res>
-  <p>The following paragraph is read only. Try clicking the button!</p>
-</ng-template>
-
-<p [contentEditable]="canEdit">{{ message }}</p>
